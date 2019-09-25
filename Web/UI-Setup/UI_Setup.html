@@ -36,6 +36,15 @@
 				</ul>
 			</div>
 		</nav>
+		
+		
+		<div class="alert alert-success" id="alertSubmitted" style="display:none">
+ 			<strong>Submitted!</strong> Travel entry was successfully submitted. 
+		</div>
+		
+		<div class="alert alert-warning" id="alertInProgress">
+  			<strong>In progress!</strong> You have to submit the travel entry.
+		</div>
 
 
 		<!-- User details -->
@@ -236,6 +245,13 @@
 			<p>Currently no warnings for the selected country.</p>
 		</div>
 		
+		<div class="row">
+			<div class="col-sm-10">
+			</div>
+			<div class="col-sim-2">
+				<button type="button" class="btn btn-default" id="buttonSubmit" onclick="actionSubmit()">Submit</button>
+			</div>
+		</div>
 		
 		
 		 <script>
@@ -266,6 +282,12 @@
 			    	document.getElementById("notifyLimitSlide").disabled=true
 			    }
 			});
+			
+			
+			function actionSubmit() {
+				  document.getElementById("alertSubmitted").style.display="block";
+				  document.getElementById("alertInProgress").style.display="none";
+			}
 		</script> 
 </body>
 </html>
